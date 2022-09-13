@@ -12,9 +12,14 @@ int main(void)
 	while (main[i] != '\0')
 	{
 		_putchar(main[i]);
+		
+		_putchar(main[i]);
+		
 		i++;
 	}
 	_putchar('\n');
+	
+	char _putchar[] = "main";
 
 	return (0);
 }
