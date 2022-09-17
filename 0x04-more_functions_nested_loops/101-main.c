@@ -1,44 +1,46 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_number -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
  * Return: Always 0.
  */
-int main(void)
+void print_number(int n)
 {
-    print_number(98);
-    _putchar('\n');
-    print_number(402);
-    _putchar('\n');
-    print_number(1024);
-    _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
-	 print_number(234252398);
-    _putchar('\n');
- print_number(-9235428);
-    _putchar('\n');
- print_number(-3453398);
-    _putchar('\n');
+	unsigned int z;
+	int m, b;
 
-print_number(2147483646);
-    _putchar('\n');
+	b = 10;
 
-print_number(-2147483647);
-    _putchar('\n');
-print_number(-5);
-    _putchar('\n');
-print_number(-1);
-    _putchar('\n');
-print_number(1);
-    _putchar('\n');
- print_number(-2147483648);
-    _putchar('\n');
- print_number(2147483647);
-    _putchar('\n');
+	if (n < 10 && n >= 0)
+	{
+		_putchar (n + '0');
+	}
+	else if (n > -10 && n < 0)
+	{
+		n = n - 2 * n;
+		_putchar('-');
+		_putchar (n + '0');
+	}
 
-    return (0);
+	else
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+			_putchar ('-');
+		}
+		z = n;
+	while (z / b > 9)
+	{
+		b = b * 10;
+	}
+	while (b > 0)
+	{
+		m = z / b;
+		z = z % b;
+		_putchar (m + '0');
+		b = b / 10;
+	}
+	}
 }
